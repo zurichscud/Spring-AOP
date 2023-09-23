@@ -13,11 +13,14 @@ import org.springframework.stereotype.Component;
 @Component
 @Aspect
 public class MyAdvice {
-    @Pointcut("execution(void com.demo1.service.UserService.method2())")
-    public  void  pointCut(){}
+    @Pointcut("execution(void com..service.UserService.method*(..))")
+    public void pointCut() {
+    }
 
     @Before("pointCut()")
-    public void method(){
+    public void before1() {
         System.out.println("hello");
     }
+
+
 }

@@ -36,4 +36,19 @@ public class UserServiceImpl implements UserService {
     public void method3() {
         System.out.println("method3程序运行中");//核心业务
     }
+
+    @Override
+    public void method11() {
+        System.out.println(11);
+    }
+
+    @Override
+    public void method4(String value) {
+        System.out.println(value);
+    }
+
+    @Override
+    public void method5(String value1, String value2) {
+        System.out.println(value1+value2);
+    }
 }
