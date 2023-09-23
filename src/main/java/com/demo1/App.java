@@ -15,9 +15,7 @@ public class App {
         //使用AOP编程，让method2实现与method1相同的效果
 //        userService.method3();
 //        userService.method11();
-        userService.method4("lai");
-        userService.method5("lai","bing");
-        userService.method11();
+        userService.method2();
 
 
     }

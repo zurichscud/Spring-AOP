@@ -4,8 +4,6 @@ import com.demo1.mapper.UserMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import javax.annotation.Resource;
-
 @Service
 public class UserServiceImpl implements UserService {
 
@@ -19,12 +17,12 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public void method1() {
-        Long start=System.currentTimeMillis();
+        Long start = System.currentTimeMillis();
         for (int i = 0; i < 10000; i++) {
             System.out.println("method1程序运行中");
         }
-        Long end=System.currentTimeMillis();
-        System.out.println("花费时间："+(end-start));
+        Long end = System.currentTimeMillis();
+        System.out.println("花费时间：" + (end - start));
     }
 
     @Override
@@ -38,17 +36,18 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
-    public void method11() {
-        System.out.println(11);
-    }
-
-    @Override
     public void method4(String value) {
         System.out.println(value);
     }
 
     @Override
     public void method5(String value1, String value2) {
-        System.out.println(value1+value2);
+        System.out.println(value1 + value2);
     }
+
+    @Override
+    public String method6(String value) {
+        return value + "ON M6";
+    }
+
 }

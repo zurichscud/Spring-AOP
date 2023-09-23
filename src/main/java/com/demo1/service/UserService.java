@@ -9,10 +9,10 @@ public interface UserService {
 
     void method3();
 
-    void method11();
-
     void method4(String value);
 
     void method5(String value1, String value2);
+
+    String method6(String value);
 
 }
