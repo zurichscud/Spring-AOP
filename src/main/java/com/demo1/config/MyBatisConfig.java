@@ -1,12 +1,11 @@
 package com.demo1.config;
 
-import org.apache.ibatis.session.SqlSessionFactory;
 import org.mybatis.spring.SqlSessionFactoryBean;
-import org.mybatis.spring.mapper.MapperScannerConfigurer;
+import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.context.annotation.Bean;
 
 import javax.sql.DataSource;
-
+@MapperScan("com.demo1.mapper")
 public class MyBatisConfig {
     @Bean
     public SqlSessionFactoryBean sqlSessionFactory(DataSource dataSource) {
@@ -15,10 +14,5 @@ public class MyBatisConfig {
         factoryBean.setDataSource(dataSource);
         return factoryBean;
     }
-    @Bean
-    public MapperScannerConfigurer mapperScannerConfigurer(){
-        MapperScannerConfigurer ms = new MapperScannerConfigurer();
-        ms.setBasePackage("com.demo1.mapper");
-        return ms;
-    }
+
 }
