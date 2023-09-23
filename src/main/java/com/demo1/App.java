@@ -11,7 +11,9 @@ public class App {
     public static void main(String[] args) {
         AnnotationConfigApplicationContext ac = new AnnotationConfigApplicationContext(SpringConfig.class);
         UserService userService = ac.getBean(UserService.class);
-        userService.function();
+        userService.method1();
+        //使用AOP编程，让method2实现与method1相同的效果
+        userService.method2();
 
 
     }
